@@ -4,7 +4,7 @@ const logger = require("morgan")
 const bodyParser = require("body-parser")
 let fs = require('fs')
 const app = express()  // make express app
-
+const port = process.env.PORT||8081
 
 // ADD THESE COMMENTS AND IMPLEMENTATION HERE
 // 1 set up the view engine
@@ -30,40 +30,49 @@ app.get("/", function (req, res) {
 app.get("/Index", function (req, res) {
   res.render("Index.ejs")
  })
- app.get("/AboutUs", function (req, res) {
-  res.render("AboutUS")
- })
  
-// 4 http GET /tic-tac-toe
+// 4 http GET /temperature-converter
 app.get("/temperature-converter", function (req, res) {
- res.render("temperature-converter")
+ res.render("temperature-converter.ejs")
 })
+// http GET/about
+app.get("/AboutUs", function (req, res) {
+  res.render("AboutUs.ejs")
+ })
 
-// 4 http GET /about
-app.get("/ContactUs", function (req, res) {
+// 4 http GET /contact
+app.get("/Contactus", function (req, res) {
  res.render("ContactUs.ejs")
 })
 
+ 
+
+
 
 // 5 handle valid POST request
-app.post("/contact", function (req, res) {
- const name = req.body.inputname;
- const email = req.body.inputemail;
- const company = req.body.inputcompany;
- const comment = req.body.inputcomment;
- const isError = true;
+app.post("/contact-me", function (req, res) {
+  var api_key = '68495047adbad379d948232cd7fa7453-4836d8f5-2a1726d3';
+  var domain = 'sandbox4619326f35024c54be0ec211948e41ab.mailgun.org';
+  var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+   
+  var data = {
+    from: 'cal App user<postmaster@sandbox1efc7e9a2bb247e89ea29eaaa62ff931.mailgun.org>',
+    to: 'venkatakhil.pendem@gmail.com',
+    subject: req.body.firstname + " Sent you a message",
+    text: req.body.subject
+  };
+   
+  mailgun.messages().send(data, function (error, body) {
+    console.log(body);
+    if(!error){
+      res.send("Mail sent");
+    }
+    else{
+      res.send("Not send");
+    }
+  });
 
- // setup e-mail data with unicode symbols
- const mailOptions = {
-   from: '"Denise Case" <denisecase@gmail.com>', // sender address
-   to: 'dcase@nwmissouri.edu, denisecase@gmail.com', // list of receivers
-   subject: 'Message from Website Contact page', // Subject line
-   text: comment,
-   err: isError
- }
 
- // logs to the terminal window (not the browser)
- console.log('\nCONTACT FORM DATA: ' + name + ' ' + email + ' ' + comment + '\n');
  })
 
 
@@ -73,7 +82,6 @@ app.get(function (req, res) {
 })
 
 // Listen for an application request on designated port
-app.listen(process.env.PORT, function () {
- console.log('Web app started and listening on http://localhost:')
+app.listen(port, function () {
+ console.log('Web app started and listening on http://localhost:' + port)
 })
-

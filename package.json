@@ -4,10 +4,11 @@
     "description": "resume app",
     "main": "app.js",
     "dependencies": {
+        "body-parser": "latest",
+        "ejs": "latest",
         "express": "latest",
         "morgan": "latest",
-        "body-parser": "latest",
-        "ejs": "latest"
+        "node": "^11.0.0"
     },
     "author": "Akhil",
     "homepage": "https://bitbucket.org/venkatakhilpendem/a03",
