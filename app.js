@@ -25,7 +25,7 @@ app.use(logger('combined', { stream: accessLogStream }));
 // 4 handle valid GET requests
 app.get("/", function (req, res) {
  //res.sendFile(path.join(__dirname + '/assets/index.html'))
- res.render("index.ejs")
+ res.render("Index.ejs")
 })
 app.get("/Index", function (req, res) {
   res.render("Index.ejs")
