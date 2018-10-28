@@ -1,0 +1,112 @@
+
+.header{
+    /* background:"art-background-backlit-333850.jpg"; */
+    /* background-image: url("wq.jpg"); */
+    /* background-repeat: no-repeat, repeat; */
+    /* height: 100vh; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; */
+  }
+  .intro{
+    min-height: 500px;
+    min-width: 100%;
+  }
+  .intro p{
+    color:white;
+    padding-top: 300px;
+    font-size: 30px;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    padding-top: 40px;
+
+    padding-bottom: 40px;
+  }
+  body{
+  
+   
+  }
+  .about-home img{
+      border-radius: 50%;
+      width:300px;
+      height: 100px;
+      margin-left: 100px;
+  }
+  .about-home{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  footer ul li {
+    list-style: none;
+  }
+  .about-jumbo{
+    text-align: center;
+  }
+  .mb-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .pd-40{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .aboutheader{
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .aboutcontent {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .videoEmbeded {
+    width=560px;
+    height=315px;
+  }
+
+  #pic{
+      width: 300px;
+      height: 300px;
+  }
+  .about-image-round{
+      border-radius: 50%;
+  }
+  .temprature{
+    padding-top:200px;
+    padding-left:500px;
+    color: white;
+  }
+  .profile-round {
+    border-radius:50%;
+    width: 400px;
+    height: 400px;
+  }
+  .profile-image {
+    padding-left: 300px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .jumbotron{
+    margin-top: 20px;
+    text-align: center;
+    background-color: aqua;
+    font-size: 28px;
+  }
+  .Contactus {
+    background-color: #DBE6E0;
+  }
+  .about-us {
+    background-color: #D4BBD0;
+  }
+  

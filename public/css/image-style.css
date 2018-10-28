@@ -1,0 +1,22 @@
+.profile-round {
+  border-radius:50%;
+  width: 400px;
+  height: 400px;
+}
+.profile-image {
+  padding-left: 300px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.jumbotron{
+  margin-top: 20px;
+  text-align: center;
+  background-color: aqua;
+  font-size: 28px;
+}
+.Contactus {
+  background-color: #DBE6E0;
+}
+.about-us {
+  background-color: #D4BBD0;
+}
